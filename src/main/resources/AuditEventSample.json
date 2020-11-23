@@ -1,0 +1,83 @@
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "dea2d089-c26b-4351-8432-148a557f4f64",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/networking.k8s.io/v1/namespaces/default/networkpolicies?fieldManager=kubectl-client-side-apply",
+  "verb": "create",
+  "user": {
+    "username": "masterclient",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "182.222.241.173"
+  ],
+  "userAgent": "kubectl/v1.19.2 (darwin/amd64) kubernetes/f574309",
+  "objectRef": {
+    "resource": "networkpolicies",
+    "namespace": "default",
+    "name": "allow-all-ingress",
+    "apiGroup": "networking.k8s.io",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 201
+  },
+  "requestObject": {
+    "kind": "NetworkPolicy",
+    "apiVersion": "networking.k8s.io/v1",
+    "metadata": {
+      "name": "allow-all-ingress",
+      "namespace": "default",
+      "creationTimestamp": null,
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"allow-all-ingress\",\"namespace\":\"default\"},\"spec\":{\"ingress\":[{}],\"podSelector\":{},\"policyTypes\":[\"Ingress\"]}}\n"
+      }
+    },
+    "spec": {
+      "podSelector": {},
+      "ingress": [
+        {}
+      ],
+      "policyTypes": [
+        "Ingress"
+      ]
+    }
+  },
+  "responseObject": {
+    "kind": "NetworkPolicy",
+    "apiVersion": "networking.k8s.io/v1",
+    "metadata": {
+      "name": "allow-all-ingress",
+      "namespace": "default",
+      "selfLink": "/apis/networking.k8s.io/v1/namespaces/default/networkpolicies/allow-all-ingress",
+      "uid": "285c0ed6-80c3-4ba8-8dfd-d4eee634bb4e",
+      "resourceVersion": "23541117",
+      "generation": 1,
+      "creationTimestamp": "2020-11-22T13:17:24Z",
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"allow-all-ingress\",\"namespace\":\"default\"},\"spec\":{\"ingress\":[{}],\"podSelector\":{},\"policyTypes\":[\"Ingress\"]}}\n"
+      }
+    },
+    "spec": {
+      "podSelector": {},
+      "ingress": [
+        {}
+      ],
+      "policyTypes": [
+        "Ingress"
+      ]
+    }
+  },
+  "requestReceivedTimestamp": "2020-11-22T13:17:24.289632Z",
+  "stageTimestamp": "2020-11-22T13:17:24.347774Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": ""
+  }
+}

@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    azure:
+      eventhub:
+        connection-string: Endpoint
+        checkpoint-storage-account: eventhubckpt
+        checkpoint-access-key: Access Key
+    stream:
+      bindings:
+        input:
+          destination: insights-logs-kube-audit
+          group: $Default
+      eventhub:
+        bindings:
+          input:
+            consumer:
+              checkpoint-mode: MANUAL
+logging:
+  level:
+    com.azure.core: ERROR
+    com.azure.messaging: ERROR
